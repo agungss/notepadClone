@@ -1,6 +1,12 @@
 # notepadClone
 Notepad clone. I made this to use notepad in my mac. Also I like coding C in notepad, clean, without any noise/syntax highlighting
 
+# Compilation
+1. git clone https://github.com/agungss/notepadClone.git
+2. javac Notepad.java
+3. jar cfm Notepad.jar manifest.mf *.class
+5. Run: java -jar Notepad.jar
+
 # Screenshots
 
 <img src="images/screenshot1.png" width="500">
