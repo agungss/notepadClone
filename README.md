@@ -6,7 +6,9 @@ Sometimes, I code Java too in notepad. It is kind of better memorization of the 
 1. git clone https://github.com/agungss/notepadClone.git
 2. javac Notepad.java
 3. jar cfm Notepad.jar manifest.mf *.class
-5. Run: java -jar Notepad.jar
+4. add to ~/.bashrc or ~/.zshrc :
+   alias notepad='java -jar /Users/agung/Programming/notepadku/Notepad.jar'
+5. Run: notepad in terminal
 
 # Screenshots
 
