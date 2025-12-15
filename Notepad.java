@@ -68,9 +68,9 @@ public class Notepad extends JFrame {
         addItem(edit, "Undo", null, e -> doUndo());
         addItem(edit, "Redo", null, e -> doRedo());
         edit.addSeparator();
-        addItem(edit, "Cut", null, e -> textArea.cut());
-        addItem(edit, "Copy", null, e -> textArea.copy());
-        addItem(edit, "Paste", null, e -> textArea.paste());
+        addItem(edit, "Cut", KeyStroke.getKeyStroke(KeyEvent.VK_X, mask), e -> textArea.cut());
+        addItem(edit, "Copy", KeyStroke.getKeyStroke(KeyEvent.VK_C, mask), e -> textArea.copy());
+        addItem(edit, "Paste", KeyStroke.getKeyStroke(KeyEvent.VK_V, mask), e -> textArea.paste());
         edit.addSeparator();
         addItem(edit, "Find / Replace...",
                 KeyStroke.getKeyStroke(KeyEvent.VK_F, mask),
@@ -114,7 +114,11 @@ public class Notepad extends JFrame {
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_F, mask), "Find");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_O, mask), "Open");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_S, mask), "Save");
-
+        
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_C, mask), "Copy");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_X, mask), "Cut");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, mask), "Paste");
+        
         am.put("Undo", new AbstractAction() {
             public void actionPerformed(ActionEvent e) { doUndo(); }
         });
@@ -130,6 +134,18 @@ public class Notepad extends JFrame {
         am.put("Save", new AbstractAction() {
             public void actionPerformed(ActionEvent e) { saveFile(); }
         });
+        
+        
+        am.put("Copy", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) { textArea.cut(); }
+        });
+        am.put("Cut", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) { textArea.copy(); }
+        });
+        am.put("Paste", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) { showFindReplaceDialog(); }
+        });
+        
     }
 
     /* ================= FILE ================= */
