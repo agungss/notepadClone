@@ -7,7 +7,7 @@ Sometimes, I code Java too in notepad. It is kind of better memorization of the 
 2. javac Notepad.java
 3. jar cfm Notepad.jar manifest.mf *.class
 4. add to ~/.bashrc or ~/.zshrc :
-   alias notepad='java -jar /Users/agung/Programming/notepadku/Notepad.jar'
+   alias notepad='java -jar <location_to_your_Notepad.jar file>'
 5. Run: notepad in terminal
 
 # Screenshots
