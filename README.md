@@ -1,5 +1,6 @@
 # notepadClone
 Notepad clone. I made this to use notepad in my mac. Also I like coding C in notepad, clean, without any noise/syntax highlighting
+Sometimes, I code Java too in notepad. It is kind of better memorization of the method, etc.
 
 # Compilation
 1. git clone https://github.com/agungss/notepadClone.git
